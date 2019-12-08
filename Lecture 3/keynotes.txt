@@ -1,0 +1,22 @@
+1 c 
+2 d
+
+
+Question No	Answer
+1	c
+2	d
+3	b
+4	d
+5	c
+6	a
+7	b
+8	
+9	b
+10	b
+11	
+12	
+13	
+14	
+31	c
+	Mailbox Code equivalent for instruction 
+19 IMP b Fetch Execute	
