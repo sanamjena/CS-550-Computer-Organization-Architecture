@@ -1,0 +1,49 @@
+00001000 Starting Address
+Assembler used: EASy68K Editor/Assembler v5.16.01
+Created On: 26-11-2019 09:31:32 PM
+
+00000000                             1  *-----------------------------------------------------------
+00000000                             2  * Title      : Read_File
+00000000                             3  * Written by : Sanam_Jena_(10454295)
+00000000                             4  * Date       : 25/11/2019
+00000000                             5  * Description: Assembly 3 Project
+00000000                             6  *-----------------------------------------------------------
+00001000                             7      ORG    $1000
+00001000                             8  START:                  ; first instruction of program
+00001000  43F9 00002000              9      lea     filename, a1
+00001006  303C 0033                 10      move    #51, d0
+0000100A  4E4F                      11      trap    #15
+0000100C                            12      
+0000100C  243C 00002059             13      move.l  #filesize, d2
+00001012  43F9 00002009             14      lea     buffer, a1
+00001018  303C 0035                 15      move    #53, d0
+0000101C  4E4F                      16      trap    #15
+0000101E                            17      
+0000101E  363C 0005                 18      move #5, d3
+00001022                            19      
+00001022                            20  * Put program code here
+00001022                            21  
+00001022  FFFF FFFF                 22      SIMHALT             ; halt simulator
+00001026                            23      
+00001026                            24      
+00002000                            25      org $2000
+00002000                            26      
+00002000= 66 69 6C 65 2E 74 ...     27  filename    dc.b 'file.txt',0
+00002009                            28  buffer      ds.b 80
+00002059= 50                        29  filesize    dc.b 80
+0000205A                            30  
+0000205A                            31  * Put variables and constants here
+0000205A                            32  
+0000205A                            33      END    START        ; last line of source
+
+No errors detected
+No warnings generated
+
+
+SYMBOL TABLE INFORMATION
+Symbol-name         Value
+-------------------------
+BUFFER              2009
+FILENAME            2000
+FILESIZE            2059
+START               1000
